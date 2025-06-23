@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jorshian Readers - STEM Website</title>
+  <style>
+    :root {
+      --primary: #004466;
+      --accent: #0077aa;
+      --light: #f9f9f9;
+      --dark: #001f2d;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--light);
+      color: #333;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background: var(--accent);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 1rem;
+    }
+
+    .section {
+      background: white;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: #e3f6fc;
+      padding: 1rem;
+      border-left: 5px solid var(--accent);
+      border-radius: 6px;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* Mobile/feature phone fallback */
+    @media only screen and (max-width: 320px) {
+      header, nav, .container, footer {
+        padding: 5px !important;
+        font-size: 14px;
+      }
+      nav a {
+        padding: 8px;
+      }
+      .card {
+        font-size: 13px;
+      }
+      .features {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>JORSHIAN READERS</h1>
+    <p><em>STEM is the Solution</em></p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Library</a>
+    <a href="#">Tracker</a>
+    <a href="#">Forums</a>
+    <a href="#">CV Help</a>
+    <a href="#">News</a>
+    <a href="#">Games</a>
+  </nav>
+
+  <div class="container">
+
+    <div class="section">
+      <h2>Welcome</h2>
+      <p>Jorshian Readers uses STEM to solve real educational and community problems in Uganda and Africa. Designed to support students, teachers, and the public across all devices — from desktops to simple phones.</p>
+    </div>
+
+    <div class="section">
+      <h2>Features</h2>
+      <div class="features">
+        <div class="card"><strong>📚 E-Library:</strong> Curriculum-based resources and past papers.</div>
+        <div class="card"><strong>📈 Academic Tracker:</strong> View your growth with charts & reports.</div>
+        <div class="card"><strong>💬 Forums:</strong> Ask, answer, and discuss with others.</div>
+        <div class="card"><strong>📰 News:</strong> Access national & global current affairs.</div>
+        <div class="card"><strong>🎮 Games:</strong> STEM-based quizzes, puzzles, and mind games.</div>
+        <div class="card"><strong>📝 CV Tools:</strong> Write CVs and job letters with smart templates.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>STEM Connection</h2>
+      <ul>
+        <li><strong>Science:</strong> Promotes inquiry and factual learning.</li>
+        <li><strong>Technology:</strong> Uses modern web tools for real-time learning.</li>
+        <li><strong>Engineering:</strong> Systematic website design & layout.</li>
+        <li><strong>Mathematics:</strong> Track data, analyze performance and logic challenges.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Device Support</h2>
+      <p>This website adjusts to your screen size automatically. Whether you are using:</p>
+      <ul>
+        <li>💻 Laptop/Desktop (Full features)</li>
+        <li>📱 Smartphone (Responsive version)</li>
+        <li>📟 Tablet (Tablet-enhanced interface)</li>
+        <li>📴 Basic phone (Text-only layout for Opera Mini & UC Browser)</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Jorshian Readers | Powered by STEM | Made in Uganda 🇺🇬
+  </footer>
+
+</body>
+</html>
