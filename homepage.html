@@ -6,25 +6,28 @@
   <title>Jorshian Readers - STEM Website</title>
   <style>
     :root {
-      --primary: #004466;
-      --accent: #0077aa;
-      --light: #f9f9f9;
-      --dark: #001f2d;
+      --blue: #006f8c;
+      --green: #00b894;
+      --light: #ecfdfd;
+      --dark: #00303f;
+      --accent: #00cec9;
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
       background: var(--light);
       color: #333;
+      transition: background 0.3s ease-in-out;
     }
 
     header {
-      background: var(--primary);
+      background: linear-gradient(135deg, var(--blue), var(--green));
       color: white;
-      padding: 1rem;
+      padding: 2rem 1rem;
       text-align: center;
+      animation: slideDown 1s ease-out;
     }
 
     nav {
@@ -32,30 +35,44 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 10px;
+      padding: 10px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
       padding: 10px 15px;
-      display: block;
       font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+      transform: scale(1.05);
     }
 
     .container {
-      padding: 1rem;
+      padding: 20px;
+      animation: fadeIn 1s ease-in;
     }
 
     .section {
       background: white;
       margin: 1rem 0;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .section:hover {
+      transform: translateY(-4px);
     }
 
     h2 {
-      color: var(--primary);
+      color: var(--blue);
       margin-top: 0;
     }
 
@@ -66,35 +83,52 @@
     }
 
     .card {
-      background: #e3f6fc;
+      background: #d0fbf5;
       padding: 1rem;
-      border-left: 5px solid var(--accent);
-      border-radius: 6px;
+      border-left: 6px solid var(--green);
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: zoomIn 0.5s ease-in;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
     }
 
     footer {
       background: var(--dark);
       color: white;
       text-align: center;
-      padding: 10px;
+      padding: 15px;
       font-size: 0.9rem;
     }
 
-    /* Mobile/feature phone fallback */
-    @media only screen and (max-width: 320px) {
+    /* Mobile Fallback */
+    @media (max-width: 320px) {
       header, nav, .container, footer {
         padding: 5px !important;
         font-size: 14px;
       }
-      nav a {
-        padding: 8px;
-      }
-      .card {
-        font-size: 13px;
-      }
       .features {
         display: block;
       }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
   </style>
 </head>
@@ -119,46 +153,45 @@
 
     <div class="section">
       <h2>Welcome</h2>
-      <p>Jorshian Readers uses STEM to solve real educational and community problems in Uganda and Africa. Designed to support students, teachers, and the public across all devices — from desktops to simple phones.</p>
+      <p><strong>Jorshian Readers</strong> solves real community and educational challenges by using STEM approaches. It works across all devices — even basic mobile phones — and brings learning, fun, and connection in one place.</p>
     </div>
 
     <div class="section">
-      <h2>Features</h2>
+      <h2>Key Features</h2>
       <div class="features">
-        <div class="card"><strong>📚 E-Library:</strong> Curriculum-based resources and past papers.</div>
-        <div class="card"><strong>📈 Academic Tracker:</strong> View your growth with charts & reports.</div>
-        <div class="card"><strong>💬 Forums:</strong> Ask, answer, and discuss with others.</div>
-        <div class="card"><strong>📰 News:</strong> Access national & global current affairs.</div>
-        <div class="card"><strong>🎮 Games:</strong> STEM-based quizzes, puzzles, and mind games.</div>
-        <div class="card"><strong>📝 CV Tools:</strong> Write CVs and job letters with smart templates.</div>
+        <div class="card"><strong>📚 E-Library:</strong> Curriculum-based books, notes, and past papers.</div>
+        <div class="card"><strong>📊 Academic Tracker:</strong> Graphs and data on your academic growth.</div>
+        <div class="card"><strong>💬 Forums:</strong> Collaborate with students, teachers, and the community.</div>
+        <div class="card"><strong>📰 News:</strong> National and global updates for youth awareness.</div>
+        <div class="card"><strong>🎮 Games:</strong> Logic puzzles, STEM challenges, and mental boosters.</div>
+        <div class="card"><strong>📝 CV Tools:</strong> Simple CV and application builders for job seekers.</div>
       </div>
     </div>
 
     <div class="section">
-      <h2>STEM Connection</h2>
+      <h2>STEM Contributions</h2>
       <ul>
-        <li><strong>Science:</strong> Promotes inquiry and factual learning.</li>
-        <li><strong>Technology:</strong> Uses modern web tools for real-time learning.</li>
-        <li><strong>Engineering:</strong> Systematic website design & layout.</li>
-        <li><strong>Mathematics:</strong> Track data, analyze performance and logic challenges.</li>
+        <li><strong>Science:</strong> Verified learning and real-world knowledge</li>
+        <li><strong>Technology:</strong> Built with responsive modern code</li>
+        <li><strong>Engineering:</strong> Structured design and smart UI/UX</li>
+        <li><strong>Mathematics:</strong> Data-driven performance analytics</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>Device Support</h2>
-      <p>This website adjusts to your screen size automatically. Whether you are using:</p>
+      <p>Jorshian Readers runs perfectly on:</p>
       <ul>
-        <li>💻 Laptop/Desktop (Full features)</li>
-        <li>📱 Smartphone (Responsive version)</li>
-        <li>📟 Tablet (Tablet-enhanced interface)</li>
-        <li>📴 Basic phone (Text-only layout for Opera Mini & UC Browser)</li>
+        <li>💻 Desktop & Laptop (Full Features)</li>
+        <li>📱 Smartphones & Tablets (Responsive View)</li>
+        <li>📴 Feature Phones (Text-optimized WAP layout)</li>
       </ul>
     </div>
 
   </div>
 
   <footer>
-    &copy; 2025 Jorshian Readers | Powered by STEM | Made in Uganda 🇺🇬
+    &copy; 2025 Jorshian Readers | Built by STEM Youth | Made in Uganda 🇺🇬
   </footer>
 
 </body>
